@@ -1,0 +1,113 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "57afdea5-5793-473e-9745-5d540e5d3302"
+    rust: {}
+  "atom-clock":
+    showTooltip: true
+  "atom-ide-ui":
+    hyperclick:
+      darwinTriggerKeys: "shiftKey,metaKey"
+    use:
+      "atom-ide-diagnostics-ui": false
+  "atom-ternjs":
+    inlineFnCompletionDocumentation: true
+    useSnippets: true
+  "autocomplete-clang":
+    clangCommand: "clang-3.9.exe"
+    ignoreClangErrors: false
+  core:
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "language-rust"
+      "racer"
+      "linter-write-good"
+      "linter-rust"
+      "language-javascript-jsx"
+      "zentabs"
+      "lcov-info"
+      "rainbow-delimiters"
+      "swackets"
+      "hyperclick"
+      "atom-language-rust"
+      "touch-bar-utility"
+    ]
+    telemetryConsent: "limited"
+    titleBar: "custom"
+  editor:
+    fontSize: 16
+    preferredLineLength: 180
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "3db3f0ef-60c8-46fb-12dd-70a38045e7c9"
+  linter:
+    lintOnChange: false
+  "linter-eslint":
+    eslintrcPath: "C:\\Users\\pfg\\.eslintrc"
+    fixOnSave: true
+    useGlobalEslint: true
+  "linter-gcc":
+    execPath: "C:\\cygwin64\\bin\\g++.exe"
+    gccDefaultCppFlags: "-c -Wall -std=c++11  -lglut -lGL "
+    gccIncludePaths: " C:\\cygwin64\\usr\\x86_64-w64-mingw32\\sys-root\\mingw\\include\\"
+  "linter-pug": {}
+  "linter-rust":
+    cargoPath: "C:\\Users\\pfg\\.cargo\\bin\\cargo.exe"
+    rustcPath: "C:\\Users\\pfg\\.cargo\\bin\\rustc.exe"
+  "linter-ui-default":
+    panelHeight: 69
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+  "one-vibrancy":
+    effect: "ultra-dark"
+  swackets:
+    colorParens: true
+    colorSquareBrackets: true
+    colors: [
+      "#FFFFFF"
+      "#FF80BA"
+      "#FBAEA7"
+      "#89BFEC"
+      "#B0EBF3"
+      "#D29B67"
+      "#E5C17C"
+      "#7CAF58"
+      "#C4E8AA"
+    ]
+  todo:
+    a_pattern: "\\/\\/\\ TODO.+"
+  "touch-bar-utility":
+    buttons: '''
+      [
+        {
+          "type": "label",
+          "label": "Touchbar"
+        },
+        {
+          "type": "button",
+          "label": "⌘␣",
+          "clickDispatchAction": "command-palette:toggle",
+          "backgroundColor": "#b355d6"
+        },
+        {
+          "type": "button",
+          "label": "//",
+          "clickDispatchAction": "editor:toggle-line-comments",
+          "backgroundColor": "#4899a8"
+        }
+      ]
+    '''
+  "vim-mode-plus":
+    notifiedCoffeeScriptNoLongerSupportedToExtendVMP: true
+  welcome:
+    showOnStartup: false
+  "windows-context-menu":
+    lastLaunchPath: "C:\\Users\\pfg\\AppData\\Local\\atom\\app-1.20.1\\atom.exe"
+  zentabs:
+    maximumOpenedTabs: 10

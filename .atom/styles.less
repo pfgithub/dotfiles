@@ -1,0 +1,147 @@
+
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  //color: white;
+  //background-color: hsl(180, 24%, 12%);
+  font-family: Consolas, 'SF Mono', Monaco, 'Courier New', Courier;
+}
+
+// To style other content in the text editor's shadow DOM, use the ::shadow expression
+
+/*.syntax--comment.syntax--block {
+  background-color:#fff;
+  border-radius: 3px;
+
+}*/
+
+.syntax--comment.syntax--double-slash, .syntax--comment.syntax--single, .syntax--comment.syntax--line {
+  font-family: sans-serif; // makes the comments sans-serif
+  font-style: normal;
+  font-size: 11.5pt;
+  background-color:#282c34; // Not sure about this one yet
+  border-radius:3px;
+  color:#5c6370;
+}
+.syntax--comment.syntax--pug {
+  color:#5c6370;
+}
+
+.syntax--comment.syntax--double-slash > .syntax--punctuation {
+  font-family: monospace; // To the double slashes of a comment
+}
+
+.cursor {
+  transition: 0.1s transform, 0.1s width, 0.1s height;
+}
+
+.cursors {
+  transition: 0.1s transform, 0.1s width, 0.1s height;
+}
+
+.highlight.selection > .region {
+  transition: 0.1s all;
+}
+
+/*.lines > div > div {
+  transition: 0.1s all;
+}*/
+
+.line-numbers > div {
+  transition: 0.1s top, 0.1s left, 0.1s right, 0.1s width, 0.1s height;
+}
+
+.syntax--punctuation.syntax--terminator {
+  visibility: hidden;
+  position: relative;
+}
+
+.syntax--punctuation.syntax--terminator:before {
+  content:"·";
+  visibility: visible;
+	position: absolute;
+}
+
+atom-text-editor[data-grammar="source gfm"] > div > .scroll-view > div > .lines > div > .line{
+  max-height:24px;
+  font-family: Arial, sans-serif;
+}
+.syntax--markup.syntax--raw.syntax--gfm{
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  background-color:hsl(220, 13%, 23%);
+  border-radius: 3px;
+}
+.syntax--markup.syntax--heading.syntax--heading-1.syntax--gfm{
+  font-size:24pt;
+  max-height:24px;
+  overflow:hidden;
+  height:24px;
+}
+.syntax--markup.syntax--heading.syntax--heading-2.syntax--gfm{
+  font-size:18pt;
+}
+
+/*.invisible-character.leading-whitespace*/.indent-guide {
+  visibility:hidden;
+}
+/*.invisible-character*/.indent-guide:before {
+    content:" ";
+    position:absolute;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    visibility:visible;
+    transform: translate(100%);
+}
+
+.line{
+  transition: 0.1s background-color;
+}//#98c379
+
+
+/*.syntax--quoted {
+  @s: 85%;
+  @l: 75%;
+  background: linear-gradient(-45deg,
+    hsl(0, @s, @l), hsl(60, @s, @l),
+    hsl(120, @s, @l), hsl(180, @s, @l),
+    hsl(240, @s, @l), hsl(300, @s, @l), hsl(360, @s, @l));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  #9c5e99, #8ab7d8, #60dd60, #ffff70, #ea9d70, #971717
+  #FFFFFF, #FF80BA, #FBAEA7, #89BFEC, #B0EBF3, #D29B67, #E5C17C, #7CAF58, #C4E8AA
+  @default: #FFFFFF;
+@level1-key: #FF80BA;
+@level1-value: #FBAEA7;
+@level2-key: #89BFEC;
+@level2-value: #B0EBF3;
+@level3-key: #D29B67;
+@level3-value: #E5C17C;
+@level4-key: #7CAF58;
+@level4-value: #C4E8AA;
+
+}*/
+
+.syntax--escape::first-letter{ /*CSS DOESN"T YET ALLOW FIRST LETTER ON SPANS FOR NO GOOD REASon*/
+  display:inline-block;
+  opacity:0.1;
+}
+.syntax--escape{ /*CSS DOESN"T YET ALLOW FIRST LETTER ON SPANS FOR NO GOOD REASon*/
+  //background: -webkit-linear-gradient(#eee, #333);
+  background: -webkit-linear-gradient(right, #98c379 50%, rgba(255,255,255,0.2) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  content: "test\'test";
+}
+
+.syntax--source.syntax--gfm > .invisible-character.eol{
+  visibility: hidden;
+}
+
+.invisible-character.eol.indent-guide{
+  visibility: hidden;
+}
