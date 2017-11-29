@@ -9,8 +9,14 @@
 atom-text-editor {
   //color: white;
   //background-color: hsl(180, 24%, 12%);
-  font-family: Consolas, 'SF Mono', Monaco, 'Courier New', Courier;
+  font-family: /*'DejaVu Sans Code',*/ /*'Fira Code',*/ /*Monoisome,*/ Consolas, 'SF Mono', Monaco, 'Courier New', Courier;
 }
+.syntax--storage.syntax--type.syntax--function.syntax--arrow, .syntax--operator {
+  font-family: 'DejaVu Sans Code';
+  font-size:11pt;
+}
+
+
 
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
 
@@ -63,8 +69,44 @@ atom-text-editor {
 
 .syntax--punctuation.syntax--terminator:before {
   content:"·";
+  //content: "α";
   visibility: visible;
 	position: absolute;
+}
+
+
+atom-text-editor {
+  .line {
+    .syntax--concealed {
+      visibility: hidden;
+      position: relative;
+      transition: 0.1s opacity;
+
+      &::before {
+        opacity:1.0 !important;
+        content: attr(data-replacement);
+
+        visibility: visible;
+      	position: absolute;
+        /*position: absolute;
+        visibility: visible;
+        text-align: center;
+        min-width: 100%;*/
+      }
+    }
+  }
+  .line.cursor-line {
+    .syntax--concealed {
+      opacity:1.0;
+      visibility: visible;
+      position: relative;
+
+      &::before {
+        opacity:0.0 !important;
+        visibility: visible;
+      }
+    }
+  }
 }
 
 atom-text-editor[data-grammar="source gfm"] > div > .scroll-view > div > .lines > div > .line{

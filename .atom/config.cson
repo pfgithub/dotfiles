@@ -16,6 +16,12 @@
   "autocomplete-clang":
     clangCommand: "clang-3.9.exe"
     ignoreClangErrors: false
+  conceal:
+    replacements:
+      a: "α"
+      function: "ƒunction"
+      let: "l"
+      test: "+"
   core:
     closeDeletedFileTabs: true
     disabledPackages: [
@@ -24,13 +30,13 @@
       "linter-write-good"
       "linter-rust"
       "language-javascript-jsx"
-      "zentabs"
       "lcov-info"
       "rainbow-delimiters"
       "swackets"
       "hyperclick"
       "atom-language-rust"
       "touch-bar-utility"
+      "conceal"
     ]
     telemetryConsent: "limited"
     titleBar: "custom"
@@ -109,5 +115,6 @@
     showOnStartup: false
   "windows-context-menu":
     lastLaunchPath: "C:\\Users\\pfg\\AppData\\Local\\atom\\app-1.20.1\\atom.exe"
+  wordcount: {}
   zentabs:
     maximumOpenedTabs: 10
